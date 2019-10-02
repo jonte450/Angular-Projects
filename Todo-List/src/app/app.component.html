@@ -1,0 +1,17 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <h1 class="text-center text-primary">Todo-List</h1>
+            <div class="input-group-prepend">
+                <input type="text" #todo class="form-control" placeholder="Add thing todo" name="todo" ngModel>
+                <span class="input-group-text" (click)="add_thing(todo.value)">
+                    <i class="material-icons">add</i></span>
+            </div>
+        </div>
+        <div class="things">
+            <ul class="list_of_things">
+                <li *ngFor="let thing of list_things">{{thing}}<i (click)="remove(thing)" class="material-icons">delete</i></li>
+            </ul>
+        </div>
+    </form>
+</div>
